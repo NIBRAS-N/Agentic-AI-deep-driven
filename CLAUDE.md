@@ -1,0 +1,64 @@
+# CLAUDE.md
+
+This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+
+## Project Overview
+
+A LangChain agentic AI course codebase (Krish Naik). Demonstrates LangChain integrations with multiple LLM providers using Jupyter notebooks as the primary learning medium.
+
+## Package Manager
+
+This project uses **uv**. Do not use `pip` directly.
+
+```bash
+# Install dependencies
+uv sync
+
+# Add a new dependency
+uv add <package>
+
+# Run a script
+uv run python main.py
+
+# Launch Jupyter for notebooks
+uv run jupyter notebook
+```
+
+## Environment Setup
+
+Copy API keys into a `.env` file at the project root. Required keys (based on providers used):
+
+```
+ANTHROPIC_API_KEY=...
+OPENAI_API_KEY=...
+GROK_API_KEY=...
+GOOGLE_API_KEY=...
+```
+
+Notebooks and scripts load these via `python-dotenv` (`load_dotenv()`).
+
+**Important:** `.env` is not listed in `.gitignore` — add it before committing.
+
+## Python Version
+
+Python 3.13 (enforced via `.python-version`).
+
+## Architecture
+
+- **Notebooks** (`.ipynb`) are the main teaching artifacts — each covers a specific LangChain concept or provider integration.
+- **`main.py`** is a scaffold entry point, not a runnable application.
+- **LangChain provider packages** installed: `langchain-anthropic`, `langchain-openai`, `langchain-groq`, `langchain-google-genai`, `langchain-community`. Switch providers by swapping the chat model class and its corresponding API key.
+- All LLM calls follow the standard LangChain interface: build a chain with `|` (LCEL), invoke with `.invoke()` or `.stream()`.
+
+## Notebook Index
+
+| # | File | Topic |
+|---|---|---|
+| 1 | `langchain/1-langchain-intro.ipynb` | LangChain agents intro — custom `get_weather` tool, `create_agent`, invoke |
+| 2 | `langchain/2-modelintegration.ipynb` | Multi-provider LLM integration (Anthropic, OpenAI, xAI Grok, Google Gemini) + `.stream()` and `.batch()` |
+| 3 | `langchain/3-tools-execution-loop.ipynb` | Manual tool-execution loop — `bind_tools`, `HumanMessage`, `ToolMessage`, parallel tool calls, unknown city handling |
+| 4 | `langchain/4-Messages.ipynb` | LangChain message types — Text Prompt, SystemMessage, HumanMessage, AIMessage, ToolMessage with weather DB examples |
+| 5 | `langchain/5-structured-output.ipynb` | Structured output — Pydantic (basic + nested), TypedDict, DataClass with `with_structured_output` and weather DB |
+| 6 | `langchain/6-middleware.ipynb` | Middleware — `SummarizationMiddleware` (token/fraction/OR-logic triggers), `HumanInTheLoopMiddleware` (approve/reject flow) |
+
+When adding a new notebook, append a row to this table.
