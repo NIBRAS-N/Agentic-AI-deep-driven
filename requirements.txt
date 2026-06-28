@@ -5,3 +5,5 @@ langchain-groq
 langchain-anthropic
 python-dotenv
 langchain-google-genai
+langgraph
+langsmith

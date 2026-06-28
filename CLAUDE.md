@@ -60,5 +60,7 @@ Python 3.13 (enforced via `.python-version`).
 | 4 | `langchain/4-Messages.ipynb` | LangChain message types — Text Prompt, SystemMessage, HumanMessage, AIMessage, ToolMessage with weather DB examples |
 | 5 | `langchain/5-structured-output.ipynb` | Structured output — Pydantic (basic + nested), TypedDict, DataClass with `with_structured_output` and weather DB |
 | 6 | `langchain/6-middleware.ipynb` | Middleware — `SummarizationMiddleware` (token/fraction/OR-logic triggers), `HumanInTheLoopMiddleware` (approve/reject flow) |
+| 7 | `langgraph/1-basic-chatbot/1-basicChatbot.ipynb` | LangGraph basics — State/Node/Edge (Bangla), `StateGraph`, `ToolNode`, `tools_condition`, `MemorySaver`, graph visualization, weather tool, streaming |
+| 8 | `langgraph/1-basic-chatbot/2-human-in-the-loop.ipynb` | HITL — `interrupt()`, `Command(resume=...)`, approve/reject/modify flows, how human decision changes tool call and LLM answer |
 
 When adding a new notebook, append a row to this table.
