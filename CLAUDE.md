@@ -47,6 +47,7 @@ Python 3.13 (enforced via `.python-version`).
 
 - **Notebooks** (`.ipynb`) are the main teaching artifacts — each covers a specific LangChain concept or provider integration.
 - **`main.py`** is a scaffold entry point, not a runnable application.
+- **`mcp/`** contains MCP (Model Context Protocol) server and client scripts — Python files, not notebooks.
 - **LangChain provider packages** installed: `langchain-anthropic`, `langchain-openai`, `langchain-groq`, `langchain-google-genai`, `langchain-community`. Switch providers by swapping the chat model class and its corresponding API key.
 - All LLM calls follow the standard LangChain interface: build a chain with `|` (LCEL), invoke with `.invoke()` or `.stream()`.
 
@@ -62,5 +63,21 @@ Python 3.13 (enforced via `.python-version`).
 | 6 | `langchain/6-middleware.ipynb` | Middleware — `SummarizationMiddleware` (token/fraction/OR-logic triggers), `HumanInTheLoopMiddleware` (approve/reject flow) |
 | 7 | `langgraph/1-basic-chatbot/1-basicChatbot.ipynb` | LangGraph basics — State/Node/Edge (Bangla), `StateGraph`, `ToolNode`, `tools_condition`, `MemorySaver`, graph visualization, weather tool, streaming |
 | 8 | `langgraph/1-basic-chatbot/2-human-in-the-loop.ipynb` | HITL — `interrupt()`, `Command(resume=...)`, approve/reject/modify flows, how human decision changes tool call and LLM answer |
+| 9 | `RAG/notebook/document.ipynb` | Document structure (`page_content`, `metadata`), Document Loaders — `PyPDFLoader`, `CSVLoader`, `WebBaseLoader`, `DirectoryLoader` |
+| 10 | `RAG/notebook/text-splitting.ipynb` | RAG data ingestion pipeline — `RecursiveCharacterTextSplitter`, `HuggingFaceEmbeddings` (sentence-transformers), FAISS, ChromaDB, full pipeline demo |
 
 When adding a new notebook, append a row to this table.
+
+## MCP Scripts
+
+Python scripts (not notebooks) under `mcp/`. Run with `uv run python <file>`.
+
+| File | Transport | Role | Notes |
+|---|---|---|---|
+| `mcp/mathServer.py` | stdio | MCP server — `add`, `subtract`, `multiply`, `divide` tools | Client spawns it automatically as a subprocess |
+| `mcp/weather.py` | streamable-http | MCP server — `get_weather` tool | Must be started separately before running client: `uv run python mcp/weather.py` |
+| `mcp/client.py` | — | Multi-server MCP client using `MultiServerMCPClient` + LangGraph + Anthropic | Start `weather.py` first, then run this |
+
+**Packages added for MCP:** `mcp`, `langchain-mcp-adapters`, `uvicorn`.
+
+**Packages added for RAG:** `pypdf`, `pymupdf`, `fpdf2` (PDF generation for sample data), `beautifulsoup4` (WebBaseLoader), `sentence-transformers`, `faiss-cpu`, `chromadb`, `langchain-huggingface`, `langchain-text-splitters`.

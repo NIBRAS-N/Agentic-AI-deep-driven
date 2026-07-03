@@ -1,0 +1,6 @@
+Supports knowledge cutoff override - use real-time or proprietary data.
+More cost-effective than fine-tuning for domain knowledge updates.
+Enables source citation and auditability of responses.
+RAG vs Fine-Tuning
+RAG is preferred when knowledge is frequently updated or document-specific. Fine-tuning is better for adapting
+model style and behavior. RAG + fine-tuning can be combined for best results

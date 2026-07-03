@@ -1,0 +1,32 @@
+Artificial Intelligence: An Overview
+
+Artificial Intelligence (AI) is a branch of computer science that aims to create machines capable of performing tasks that typically require human intelligence. These tasks include understanding natural language, recognizing patterns, solving problems, and making decisions.
+
+History of AI
+The concept of artificial intelligence dates back to the 1950s, when Alan Turing proposed the "Turing Test" as a measure of machine intelligence. In 1956, John McCarthy coined the term "Artificial Intelligence" at the Dartmouth Conference, marking the official birth of the field.
+
+Types of AI
+There are several types of AI based on capability:
+1. Narrow AI (Weak AI): Designed for specific tasks, like image recognition or language translation. Examples include Siri, Alexa, and chess programs.
+2. General AI (Strong AI): Hypothetical AI with human-level intelligence across all domains. This does not yet exist.
+3. Super AI: Hypothetical AI that surpasses human intelligence. This remains a theoretical concept.
+
+Machine Learning
+Machine Learning (ML) is a subset of AI that enables computers to learn from data without being explicitly programmed. Key ML techniques include:
+- Supervised Learning: Training on labeled data
+- Unsupervised Learning: Finding patterns in unlabeled data
+- Reinforcement Learning: Learning through trial and reward
+
+Deep Learning
+Deep Learning uses neural networks with many layers (hence "deep") to process complex data. It powers modern breakthroughs in image recognition, speech processing, and natural language understanding.
+
+Applications of AI
+AI is transforming numerous industries:
+- Healthcare: Disease diagnosis, drug discovery, medical imaging
+- Finance: Fraud detection, algorithmic trading, credit scoring
+- Transportation: Self-driving cars, route optimization
+- Education: Personalized learning, intelligent tutoring systems
+- Entertainment: Content recommendations, game AI
+
+Future of AI
+As AI continues to advance, it raises important ethical questions about privacy, bias, job displacement, and the long-term impact on society. Responsible AI development requires careful consideration of these concerns.
