@@ -1,6 +1,8 @@
-Supports knowledge cutoff override - use real-time or proprietary data.
-More cost-effective than fine-tuning for domain knowledge updates.
-Enables source citation and auditability of responses.
-RAG vs Fine-Tuning
-RAG is preferred when knowledge is frequently updated or document-specific. Fine-tuning is better for adapting
-model style and behavior. RAG + fine-tuning can be combined for best results
+NLP Pipeline
+A typical NLP pipeline includes:
+1. Tokenization: Breaking text into words or subwords
+2. Stop word removal: Filtering common words (the, is, at)
+3. Stemming/Lemmatization: Reducing words to base form
+4. Part-of-speech tagging: Identifying nouns, verbs, adjectives
+5. Dependency parsing: Understanding grammatical structure
+6. Feature extraction: Converting text to numerical representat
