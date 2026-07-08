@@ -65,6 +65,7 @@ Python 3.13 (enforced via `.python-version`).
 | 8 | `langgraph/1-basic-chatbot/2-human-in-the-loop.ipynb` | HITL — `interrupt()`, `Command(resume=...)`, approve/reject/modify flows, how human decision changes tool call and LLM answer |
 | 9 | `RAG/notebook/document.ipynb` | Document structure (`page_content`, `metadata`), Document Loaders — `PyPDFLoader`, `CSVLoader`, `WebBaseLoader`, `DirectoryLoader` |
 | 10 | `RAG/notebook/text-splitting.ipynb` | RAG data ingestion pipeline — `RecursiveCharacterTextSplitter`, `HuggingFaceEmbeddings` (sentence-transformers), FAISS, ChromaDB, full pipeline demo |
+| 11 | `vectorless-rag/vectorLess-RAG.ipynb` | Vectorless RAG (PageIndex concept) — no chunking/embeddings/vector DB; builds a hierarchical tree index from a PDF with `ChatAnthropic` + `with_structured_output`, then does LLM tree search, cited answer generation, and expert-guided retrieval |
 
 When adding a new notebook, append a row to this table.
 
