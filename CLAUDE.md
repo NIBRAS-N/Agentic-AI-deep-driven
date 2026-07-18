@@ -66,6 +66,7 @@ Python 3.13 (enforced via `.python-version`).
 | 9 | `RAG/notebook/document.ipynb` | Document structure (`page_content`, `metadata`), Document Loaders — `PyPDFLoader`, `CSVLoader`, `WebBaseLoader`, `DirectoryLoader` |
 | 10 | `RAG/notebook/text-splitting.ipynb` | RAG data ingestion pipeline — `RecursiveCharacterTextSplitter`, `HuggingFaceEmbeddings` (sentence-transformers), FAISS, ChromaDB, full pipeline demo |
 | 11 | `vectorless-rag/vectorLess-RAG.ipynb` | Vectorless RAG (PageIndex concept) — no chunking/embeddings/vector DB; builds a hierarchical tree index from a PDF with `ChatAnthropic` + `with_structured_output`, then does LLM tree search, cited answer generation, and expert-guided retrieval |
+| 12 | `deepagents/1-basic-deepAgents.ipynb` | Deep Agents intro — `create_deep_agent()` with planning (`write_todos`), filesystem tools, sub-agent delegation (`task`) for context isolation, and cross-thread memory via `StoreBackend` + `InMemoryStore`/`InMemorySaver`; Tavily `internet_search` tool; research-agent + critique-agent multi-agent demo; graph visualization |
 
 When adding a new notebook, append a row to this table.
 
@@ -80,6 +81,8 @@ Python scripts (not notebooks) under `mcp/`. Run with `uv run python <file>`.
 | `mcp/client.py` | — | Multi-server MCP client using `MultiServerMCPClient` + LangGraph + Anthropic | Start `weather.py` first, then run this |
 
 **Packages added for MCP:** `mcp`, `langchain-mcp-adapters`, `uvicorn`.
+
+**Packages added for Deep Agents:** `deepagents`, `tavily-python`.
 
 **Packages added for RAG:** `pypdf`, `pymupdf`, `fpdf2` (PDF generation for sample data), `beautifulsoup4` (WebBaseLoader), `sentence-transformers`, `faiss-cpu`, `chromadb`, `langchain-huggingface`, `langchain-text-splitters`.
 

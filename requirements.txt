@@ -7,3 +7,5 @@ python-dotenv
 langchain-google-genai
 langgraph
 langsmith
+deepagents
+tavily-python
